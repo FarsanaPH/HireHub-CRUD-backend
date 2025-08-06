@@ -20,8 +20,8 @@ The React frontend is available and deployed here:
 
 ## 📁 GitHub Repositories
 
-- 🔗[Frontend Repo](https://github.com/FarsanaPH/HireHub-CRUD-frontend)
-- 🔗[Backend Repo](https://github.com/FarsanaPH/HireHub-CRUD-backend)
+- [Frontend Repo](https://github.com/FarsanaPH/HireHub-CRUD-frontend)
+- [Backend Repo](https://github.com/FarsanaPH/HireHub-CRUD-backend)
 
 
 ---
