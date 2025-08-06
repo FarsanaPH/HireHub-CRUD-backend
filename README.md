@@ -25,6 +25,6 @@ The React frontend is available and deployed here:
 
 
 ---
- 📌 **Note:** This project uses a **mock API** powered by JSON Server. It’s designed to mimic real-world functionality for learning and demonstration purposes.
+ 📌 **Note:** This project uses a **mock API** powered by JSON Server. It’s designed to mimic real-world functionality for learning and demonstration purposes —  "Thanks for visiting the project. 😊"
 
- >*"Thanks for visiting the project. 😊"*
+
