@@ -1,0 +1,316 @@
+---------------------------------------------------------------------------------------------------------
+-------------------------------------------------   REACT   ---------------------------------------------
+---------------------------------------------------------------------------------------------------------
+=> React is a popualar open source web application 
+=> maintained by Meta.
+
+Features:-
+---------
+1) Create UI: Frontend Technology
+2) based on JavaScript- javascript library
+3) Single page Aplication- index.html, Dynamically rewrite a new content when the user interract.
+4) Declarative Application - Application which does not access the DOM directly.
+5)Virtual DOM -
+        ->It is a copy of the real DOM.
+        -> It is created by React.
+        -> Recouncilation: The process of comaring the virtual DOM with the Real DOM.
+        -> Diffing: The proces of updating the real DOM as that of Virtual DOM with the help of Diffing algorithm
+            Advantages:-
+
+          => Avoid the entire application reaload after each interaction.
+6) Language used is : JSX Javascript XML- html inside java script
+7)Transpiling: It is a process of converting JSX into browser understanding langage with the help of Babel library
+8) Data Sharing:- Uni-directional ( parent to child with the help of a predefined object named props.)
+9) Pure Function:- The output will be depends only on the arguement.
+10) Component based langage- Basic unit of react application(UI).
+
+
+STEPS TO CREATE A PROJECT
+-------------------------
+
+-> Old command to creata a REACT project:- npx create-react-app project_name
+            npx- node package exicute
+
+
+->New command:- npm create vite@latest project_name( in small letters)
+            npm- node package manager
+
+
+ 
+  -----------------------------
+
+ -> install node Modules:  npm install
+ -> to run project:  npm run dev
+
+
+ FILES:-
+ ------
+ 1. README.md - provides a description of the react application.
+
+ 2.vite.config.js -It gives the configuration of vite-react
+
+ 3.package.json - npm configuration - details of the project
+        ->script:  run  project
+        ->dependencies: name of the installed libraries
+
+4.package-lock.json -  it includes the version of the  installed libraries and it's integrity.
+
+5. Node modules - It contains the copy of the installed libraries.
+
+6. .gitignore - It contains the name of the fle that need to be ignored while adding the code to git.
+
+7.eslint.config.js -error handling
+
+8.public - files or images that need to be accessed publically
+
+
+HTML in React
+-------------
+syntax:
+
+Function  componentName(){
+    js code
+    return (
+        html code
+    )
+}
+
+export default componentName
+
+=> html tags must be placed inside return Function
+=> Each html tag in a react component must be placed in a Single parent tag.
+=> react fragment <> </>
+
+CSS in Reaact
+-------------
+1. inline
+style= {{property:value,}}
+2. external
+=>external file -componentName.css
+=>import key is used  to connect the css file with jsx file
+seector{
+    property: value
+}
+global styling -index.css
+styling a particular component - componentName.css
+
+3. module.css
+=> create an external file with an extension as module.css
+=> it must be inside the src folder
+=> it must be assigned to a variable for styling
+
+
+JS code
+-------
+ => To place JS content inside a return function, place the JS content in a curly bracket :- {}
+
+ Events
+ ------
+ onclick, submit, load, change-----
+
+ onclick="functionName()"
+
+ without arguement
+
+ onClick={functionName}
+
+ with arguement
+ onClick ={()=> functionName(arguements)}
+
+ Strict Mode
+ ----------
+ ->  detects unexpected side effects
+ -> warns about the depricated Application
+ -> Identifies the unsafe life cycle methods - class components
+ -> check teh performance of the application
+
+ components
+ ----------
+ -> Basic unit of React Application
+
+Rules to Create a component
+-------------------------
+
+1. The name of the component must start with start with capital letter.
+2. Extension can be in .jsx or .js
+3. rename of the component is not possible
+4. To access the comnponents anywhere in the react appliaction, it should be export from the file where it is created and import the file where to access.
+5, components is placed as a self closing tags.
+
+
+Types of components
+-------------------
+1. Functional components // ststeless components
+
+
+import React from 'react'
+
+We can simply call it as rfce
+
+function Demo() {
+  return (
+    <div>
+       <h1>This is demo page</h1>
+    </div>
+  )
+}
+
+export default Demo
+
+2. Class Components // ststeful components
+
+We can simply call it as rcc
+
+import React, { Component } from 'react'
+
+export default class Random extends Component {
+  render() {
+    return (
+      <div>
+        This is Random Page
+      </div>
+    )
+  }
+}
+
+
+DATA Sharing
+------------
+
+=> Default (Unidirectional)  - parent to child
+=> predefined object called props
+
+syntax:
+
+{key : value}
+
+
+
+Conditional Rendering
+---------------------
+1. Ternary Operator
+condition ? true : false
+2.Truthy Operator
+ condition $$ true
+
+ state
+ -----
+
+=> State is a object used to store properties of react class Components
+
+ =>When the data in the state changes the entire components re-render (reloads)
+
+ => To change the value stored in the state, call setState function
+
+
+
+ LifeCycle of components
+ -----------------------
+
+ 1.Mounting Phase - Components added to DOM ( Rendering into the browser)
+        :- Constructor() - initialize the state
+        :-getDerievedStateFromProps() -  return object if the  data is comming from the parent or null is there, so no data sharing.
+            :Object - state will be updated with new data
+            :null - state will be having the old initialized value
+
+        :-render() - Loads the jsx content to the browser. (Output)
+        :-componentDidMount() -  network calls, api    
+
+
+ 2.Update Phase - Editing of the component.
+ :-getDerievedStateFromProps() -  return object if the  data is comming from the parent or null is there, so no data sharing.
+            :Object - state will be updated with new data
+            :null - state will be having the old initialized value
+        :-shouldComponentUpdate() - Return true or false (Boolean value)
+              ->true:  state will be updated with new value
+              ->false: No Update in value
+        :-render() - Loads the jsx content to the browser. (Output)
+        :-fetSnapshotBeforeUpdate() - call right before the data of virtual dom is updated in the real DOM - it stores some important information of the DOM before update.
+        :-componentDidMount() -  call after the DOM is updated, used to interact with the DOM and perform sideEffect - api
+ 
+ 
+3.Unmounting Phase - Removing the components from the DOM
+        :-componentWillUnmount() -  invokes just before the component unmount/remove
+        ::- used to cancel the  network calls.
+
+
+
+Hooks
+-----
+
+=> Hooks are used to do certain task
+    ->Types of Hooks
+
+      1)Builtin Hooks
+      2)Custom Hooks
+
+
+1. Builtin Hooks
+-----------------
+    1.useState() - Used to create state in functional components
+
+    2.useEffect() - Used to provide LifeCycle to a functional component.
+
+
+    Rules to create Hooks
+    ---------------------
+
+    1. import the hooks from the library at the top of the file.
+    2. Hooks should be called at the top of the function.
+    3. Cannot invoke hooks based on a condition
+
+
+    NAVIGATION
+    -------------
+    1.Link- react router dom
+        ->npm i react-router-dom
+
+    2.place the app component inside BrowserRouter tag
+
+    3.place all components that need routing inside a Routes tag.place the Route tag as a child of Routes tag
+      Rotes tag
+      Link tag - used t navigate to a specific location
+      to attribute - used to specify the path(url)
+      
+      JSON SERVER
+     -----------------
+     =>it is a light weight and easy to use node.js tool that simulate a restful api used in Json file as the data
+     => it helps  devs to create a mock api without using complex server side
+     =>if the server is not ready yet we use this
+
+     Features
+     ----------
+     1.easy too setup
+     2.supports http methods
+     3.handles CRUD operations
+     4.create custom routes
+
+     steps to create a Json server
+     ------------------------------
+     1.create a folder for server
+     2.create package.json file using command - npm init-y
+     3.install Json server library using command-mpm i json-server
+     4.create .gitignore file
+     5.create a json file to store data
+     6.create a index.js file as (entry point to the server side)
+     7.edit the script tag to run the index.js file
+
+
+index.js file setups
+
+------------------------
+
+1 : import json server library - require keyword
+2 : create the server using creare() method in library
+3 : setup port for the server
+4 : run the server and make it listen to the request coming to the server.
+
+5 : invoke middleware to parse the json data.
+
+=> middleware is a function which have ability to break the request response cycle
+
+- defaults() - predifined middleware
+
+nodemon - auto compilation - install - npm i nodemon / npm i -g nodemon
+
+Axios : Promise based HTTP client for the browser and node.js

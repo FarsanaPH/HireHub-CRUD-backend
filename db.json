@@ -1,0 +1,20 @@
+{
+  "jobs": [
+    {
+      "jobTitle": "MERN Developer",
+      "company": "LUMINAR",
+      "location": "Kakkanad",
+      "salary": "20000",
+      "description": "Need excellent knowledge in MERN with min 2 yr experience",
+      "id": 1
+    },
+    {
+      "jobTitle": "Software Tester",
+      "company": "ABC Technologies",
+      "location": "Kochi",
+      "salary": "50000",
+      "description": "Tester with min 3 yr experience with excellent knowledge.",
+      "id": 2
+    }
+  ]
+}
