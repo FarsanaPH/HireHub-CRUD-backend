@@ -16,7 +16,7 @@ Use this endpoint to perform CRUD operations on job data.
 ## Frontend 
 
 The React frontend is available and deployed here:
-🔗[Live Demo:View on Vercel](https://hirehub-crud-frontend.vercel.app/)
+[Live Demo: Deployed on Vercel](https://hirehub-crud-frontend.vercel.app/)
 
 ## 📁 GitHub Repositories
 
