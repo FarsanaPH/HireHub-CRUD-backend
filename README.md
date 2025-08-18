@@ -1,4 +1,4 @@
-# HireHub Backend – Mock API
+# HireHub Backend 
 
 This is the backend for the **HireHub** project, built using **JSON Server**. It provides a mock RESTful API for fast prototyping to simulate job data management for the frontend.
 
